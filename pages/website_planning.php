@@ -35,7 +35,7 @@
 		<td>完成</td></tr>
       <tr class="active">
         <td>4</td>
-        <td>随笔布局</td>
+        <td>常用链接功能</td>
 		<td>待。。。</td></tr>
       <tr class="active">
         <td>5</td>

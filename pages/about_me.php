@@ -29,7 +29,7 @@
 <div class="container">
 	<div class="row clearfix">
 		<div class="col-md-12">
-			<div class="me-header pull-left"><img class="img-thumbnail" src="../assets/photo128x128.ico"  alt="头像"></div>
+			<div class="me-header pull-left"><img class="img-thumbnail" src="/assets/images/photo128x128.ico"  alt="头像"></div>
 
 			<div class="me-info pull-left" style="height: 90px;overflow: hidden;padding-left: 15px;">
 				<h4>夕曦 &middot; 90后</h4>
@@ -45,7 +45,8 @@
 	<div class="col-md-12">
       <h5><span class="glyphicon glyphicon-console" aria-hidden="true"></span>&nbsp;&nbsp;个人简介</h5>
       <p style="line-height: 2em;" class="well">
-      此处已被打马赛克。。。。
+       信息：CSDN证书查询 https://edu.csdn.net/cert<br>
+	   C0102018121001004068
       <!--
         90后程序猿一枚，毕业于一所NB的挖煤大学，学了一门全能的计算机科学与技术专业，胸怀大志，有匡扶正义，振兴中华之心。<br>
         一直以来，坚持“三个代表”重要思想，时刻铭记“八荣八耻”社会主义核心价值观，准备随时为共产主义事业加油呐喊。<br>

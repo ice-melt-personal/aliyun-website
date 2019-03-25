@@ -10,14 +10,29 @@
 <!-- 包含 bootstrap 样式表 -->
 <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
 
-<!---->
-<link rel="stylesheet" href="/assets/style.css" />
-<link rel="shortcut icon" href="/assets/favicon.ico" /> 
+<!--
+<link rel="stylesheet" href="assets/css/style02.css" />
+-->
+<link rel="shortcut icon" href="/assets/images/favicon.ico" /> 
 
+<style>
+body {
+	padding-top: 50px; 
+}
+.footer {
+	padding-top: 10px;
+    background-color: #222;
+	width: 100%;
+}
+.footer a:link{text-decoration:none; color:#9d9d9d;}
+.footer a:visited{text-decoration:none;color:#9d9d9d; }
+.footer a:active{text-decoration:none;color:#9d9d9d;}
+.footer a:hover{text-decoration:none;color:#9d9d9d;}
+</style>
 </head>
 
 <body bgcolor="#F5F5F5">
-<div class="container">
+<div class="container header">
 	<div class="row clearfix">
 		<div class="col-md-12 column">
 			<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
@@ -48,7 +63,7 @@
 							 <a href="javascript:void(0)" onclick="iFrame('comment.php')">留言</a>
 						</li>
 						<li class="dropdown">
-							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于<strong class="caret"></strong></a>
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于</a>
 							<ul class="dropdown-menu">
 								<li>
 									 <a href="javascript:void(0)" onclick="iFrame('website_description.php')">网站说明</a>
@@ -80,11 +95,13 @@
 	</div>
 </div> 
 
-<iframe src='pages/home.php' width='100%' height='100%' frameborder='0' id="iFrame-content" onLoad="iFrameHeight()"></iframe>	
-	
+
+<iframe src='pages/home.php' width='100%' height="558px" frameborder='0' id="iFrame-content" ></iframe>	
+ 	
 	
 <div class="container footer"> 
-	<div class="row">
+	<!--
+	<div class="row clearfix">
 		<div class="col-md-12 column">
 			<p class="text-center">
 				<a href="#">自强</a> | 
@@ -93,8 +110,8 @@
 				<a href="#">创新</a>
 			</p>
 		</div>
-	</div>
-	<div class="row">
+	</div>-->
+	<div class="row clearfix">
 		<div class="col-md-12 column">
 			<p class="text-center">
 			<a href="#">Copyright &copy; <?php echo date("Y")?> 夕兮曦兮的个人网站-</a>
@@ -112,17 +129,40 @@
 <!-- 可选: 合并了 Bootstrap JavaScript 插件 -->
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-	<script type="text/JavaScript">
-		function iFrameHeight() {
-			var ifm= document.getElementById("iFrame-content");  
-			var subWeb = document.frames ? document.frames["iFrame-content"].document : ifm.contentDocument;  
-			if(ifm != null && subWeb != null) {  
-				ifm.height = subWeb.body.scrollHeight; 
-			}
+<script type="text/JavaScript">
+
+	$(document).ready(function(){
+	    $(".dropdown").on({
+			mouseover : function(){
+				$(".dropdown-menu").show();
+			},
+			mouseout : function(){
+				$(".dropdown-menu").hide();
+			} 
+		}) ;
+	});
+
+//$(document).ready(function(){ 
+//	var a = document.body.clientHeight;
+//	var height = $('body').clientHeight-50;
+//	console.log(a);
+//	$('#iFrame-content').css('height',height+"px")
+//});
+// onLoad="iFrameHeight()"
+	function iFrameHeight() {
+		console.log('=======')
+		var ifm= document.getElementById("iFrame-content");  
+		var subWeb = document.frames ? document.frames["iFrame-content"].document : ifm.contentDocument;
+		var type = document.frames?0:1;
+		console.log(type)
+		if(ifm != null && subWeb != null) {  
+			//ifm.height = subWeb.body.scrollHeight; 
+			ifm.height = $('body').scrollHeight;
 		}
-		function iFrame(url){
-			
-			$('#iFrame-content').attr("src", "pages/"+url)
-		}
-	</script>
+	}
+	function iFrame(url){
+		
+		$('#iFrame-content').attr("src", "pages/"+url)
+	}
+</script>
 </html>

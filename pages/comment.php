@@ -8,26 +8,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- 包含 bootstrap 样式表 -->
 <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+<style>
+body{
+	height:auto;
+}
+</style>
 </head>
 
 <body bgcolor="#F5F5F5">
 <div class="container">
-	<div class="panel panel-info">
-		<div class="panel-heading">
-         
-		</div>
-		<div class="panel-body">
-			<span class="label label-info">如果您有好的想法和建议</span><br>
-			<span class="label label-info">如果您对本人分享的内容有疑问</span><br>
-			<span class="label label-info">如果您想和我交流</span><br>
-			<span class="label label-info">欢迎在下方留言</span><br>
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+
+			<div class="panel panel-info">
+				<div class="panel-heading">
+
+				</div>
+				<div class="panel-body">
+					<span class="label label-info">如果您有好的想法和建议</span><br>
+					<span class="label label-info">如果您对本人分享的内容有疑问</span><br>
+					<span class="label label-info">如果您想和我交流</span><br>
+					<span class="label label-info">欢迎在下方留言</span><br>
+				</div>
+			</div> 
 		</div>
 	</div> 
 </div>
-
- 
 <div class="container">
-<div class="row clearfix">
+	<div class="row clearfix">
 		<div class="col-md-12 column">
 			<!--PC和WAP自适应版-->
 			<!-- 畅言垃圾，

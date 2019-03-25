@@ -691,7 +691,7 @@ button{
 			<div class="content">
 					<div class="daohang-lianjie" align="left" onClick="Newopen('http://blog.csdn.net/')">
 						<div class="daohang-logo">
-							<img src="/assets/links/daohang/csdn.ico">
+							<img src="/assets/images/links/daohang/csdn.ico">
 							<span>CSDN</span>				
 						</div>
 						<div class="daohang-shuoming">
@@ -700,7 +700,7 @@ button{
 					</div>
 					<div class="daohang-lianjie" align="left" onClick="Newopen('https://juejin.im/')">
 						<div class="daohang-logo">
-							<img src="/assets/links/daohang/gold-favicon.png">
+							<img src="/assets/images/links/daohang/gold-favicon.png">
 							<span>掘金</span>
 						</div>
 						<div class="daohang-shuoming">
@@ -709,7 +709,7 @@ button{
 					</div>
 					<div class="daohang-lianjie" align="left" onClick="Newopen('https://github.com/')">
 						<div class="daohang-logo">
-							<img src="/assets/links/daohang/github.ico">
+							<img src="/assets/images/links/daohang/github.ico">
 							<span>github</span>
 						</div>
 						<div class="daohang-shuoming">
@@ -718,7 +718,7 @@ button{
 					</div>
 					<div class="daohang-lianjie" align="left" onClick="Newopen('http://stackoverflow.com/')">
 						<div class="daohang-logo">
-							<img src="/assets/links/daohang/stackoverflow.ico">
+							<img src="/assets/images/links/daohang/stackoverflow.ico">
 							<span>stackoverflow</span>
 						</div>
 						<div class="daohang-shuoming">
@@ -727,7 +727,7 @@ button{
 					</div>
 					<div class="daohang-lianjie" align="left" onClick="Newopen('https://segmentfault.com/')">
 						<div class="daohang-logo">
-							<img src="/assets/links/daohang/segmentfault.ico">
+							<img src="/assets/images/links/daohang/segmentfault.ico">
 							<span>segmentfault</span>
 						</div>
 						<div class="daohang-shuoming">
@@ -736,7 +736,7 @@ button{
 					</div>
 					<div class="daohang-lianjie" align="left" onClick="Newopen('https://www.zhihu.com/')">
 						<div class="daohang-logo">
-							<img src="/assets/links/daohang/zhihu.ico">
+							<img src="/assets/images/links/daohang/zhihu.ico">
 							<span>知乎</span>
 						</div>
 						<div class="daohang-shuoming">
@@ -745,7 +745,7 @@ button{
 					</div>
 					<div class="daohang-lianjie" align="left" onClick="Newopen('https://www.cnblogs.com/')">
 						<div class="daohang-logo">
-							<img src="/assets/links/daohang/cnblogs.ico">
+							<img src="/assets/images/links/daohang/cnblogs.ico">
 							<span>博客园</span>
 						</div>
 						<div class="daohang-shuoming">
@@ -754,7 +754,7 @@ button{
 					</div>
 					<div class="daohang-lianjie" align="left" onClick="Newopen('https://www.oschina.net/')">
 						<div class="daohang-logo">
-							<img src="/assets/links/daohang/oschina.ico">
+							<img src="/assets/images/links/daohang/oschina.ico">
 							<span>开源中国</span>
 						</div>
 						<div class="daohang-shuoming">
@@ -763,7 +763,7 @@ button{
 					</div>
 					<div class="daohang-lianjie" align="left" onClick="Newopen('https://www.v2ex.com/')">
 						<div class="daohang-logo">
-							<img src="/assets/links/daohang/v2ex.png">
+							<img src="/assets/images/links/daohang/v2ex.png">
 							<span>V2EX</span>
 						</div>
 						<div class="daohang-shuoming">
@@ -772,7 +772,7 @@ button{
 					</div>
 					<div class="daohang-lianjie" align="left" onClick="Newopen('https://coding.net/')">
 						<div class="daohang-logo">
-							<img src="/assets/links/daohang/coding.png">
+							<img src="/assets/images/links/daohang/coding.png">
 							<span>Coding</span>
 						</div>
 						<div class="daohang-shuoming">
