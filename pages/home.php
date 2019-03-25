@@ -15,8 +15,43 @@
 	}
 </style>
 </head>
-<body>  
+<?php
+$href1 = "http://ice-melt.top/blog/";
+$href2 = "http://ice-melt.top/projects/yiqingxuan";
+$href3 = "http://ice-melt.top/projects/yi";
+$href4 = "http://ice-melt.top/projects/tmlog";
+$href5 = "http://ice-melt.github.io";
 
+//$href1 = "http://localhost/blog/";
+//$href2 = "http://localhost/projects/yiqingxuan";
+//$href3 = "http://localhost/projects/yi";
+//$href4 = "http://localhost/projects/tmlog";
+//$href5 = "http://ice-melt.github.io";
+
+?>
+<body>  
+<div class="table-responsive">
+	<h1>网站建设中。。。<h1>
+  <table class="table table-striped table-hover "> 
+    <tbody> 
+		<tr>
+			<td>WordPress搭建博客</td>
+			<td><a href="<?php echo $href1; ?>">跳转</a></td></tr>
+		<tr>
+			<td>参考1</td>
+			<td><a href="<?php echo $href2; ?>">跳转</a></td></tr>
+		<tr>
+			<td>参考2</td>
+			<td><a href="<?php echo $href3; ?>">跳转</a></td></tr>
+		<tr>
+			<td>参考3</td>
+			<td><a href="<?php echo $href4; ?>">跳转</a></td></tr>
+		<tr>
+			<td>GitHub+Jetty</td>
+			<td><a href="<?php echo $href5; ?>">跳转</a></td></tr>
+    </tbody>
+  </table>
+</div>
 
 </body>
 <!-- JavaScript 放置在文档最后面可以使页面加载速度更快 -->
