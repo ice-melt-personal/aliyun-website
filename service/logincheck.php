@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("db/conn.php");
+include("conn.php");
 
 
 //登录处理界面 logincheck.php

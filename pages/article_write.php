@@ -1,6 +1,5 @@
 <?php
-session_start();
-include("../service/db/conn.php");
+session_start(); 
 ?>
 
 <!DOCTYPE html>
@@ -59,7 +58,7 @@ include("../service/db/conn.php");
 <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 <!-- 可选: 合并了 Bootstrap JavaScript 插件 -->
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="\service\showdown-master\dist\showdown.min.js"></script>
+<script src="showdown-master/dist/showdown.min.js"></script>
 <script>
 	<!--写转化函数-->
 function convert(){
@@ -76,7 +75,7 @@ $("#save").click(function(){
 	
 	$.ajax({
 		type: "POST",
-		url: "/service/save_article.php",
+		url: "/service/article_save.php",
 		data: {	title: title, 
 				filetype: filetype,
 				content,content},
@@ -91,6 +90,8 @@ $("#save").click(function(){
 				alert("对不起，保存超时，请重新保存。");
 				return false;
 			}else{//其他错误
+				console.log(textStatus);
+				console.log(XMLHttpRequest)
 				alert("操作失败！");
 				return false;
 			}

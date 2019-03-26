@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 <!DOCTYPE html>
 <html> 
@@ -79,13 +78,13 @@ body {
 							if(isset($_COOKIE["im_username"])){
 						?>	
 						<li>
-							<a href="javascript:void(0)" onclick="iFrame('artical_write.php')">写博客</a>
+							<a href="javascript:void(0)" onclick="iFrame('article_write.php')">写博客</a>
 						</li>
 						<?php
 							}
 						?>
 						<li>
-							<a href="javascript:void(0)" onclick="iFrame('artical_list.php')">博客</a>
+							<a href="javascript:void(0)" onclick="iFrame('article_list.php')">博客</a>
 						</li>
 						<li>
 							<a href="javascript:void(0)" onclick="iFrame('tutorials.php')">教程</a>

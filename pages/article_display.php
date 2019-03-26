@@ -1,8 +1,3 @@
-<?php
-session_start();
-include("../service/query_article_by_id.php");
-?>
-
 <!DOCTYPE html>
 <html> 
 <head>
@@ -21,36 +16,16 @@ include("../service/query_article_by_id.php");
 
 <div class="container">
 
-	<?php
-		$num=mysqli_num_rows($result);
-		if($num==0){
-	?> 	
-	<div class="panel panel-primary">
-		<div class="panel-heading">
-			<h3 class="panel-title"></h3>
-		</div>
-		<div class="panel-body">
-			<div id="result" style="border:1px solid #ddd;height:400px;width:600px;"></div>
-		</div>;
-	</div>;
-	<?php
-		}else{
-			$row=mysqli_fetch_assoc($result);
-	?> 
-		<div class="panel panel-primary">
+		<div id="artical" class="panel panel-primary">
 			<div class="panel-heading">
-				<h3 class="panel-title"><?php echo $row['title'];?></h3>
+				<h3 class="panel-title">{{data.title}}</h3>
 			</div>
 			<div class="panel-body">
 				<div id="result" style="border:1px solid #ddd;height:auto;width:80%;">
-				<?php echo $row['content'];?>
+				{{data.content}}
 				</div>
 			</div>
 		</div>
-		
-	<?php	
-		} 
-	?> 	
 </div>
 </body>
 
@@ -60,8 +35,43 @@ include("../service/query_article_by_id.php");
 <!-- 可选: 合并了 Bootstrap JavaScript 插件 -->
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="\service\showdown-master\dist\showdown.min.js"></script>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
 <script>
+$(document).ready(function(){
+	//获取 上一个搜索页面传来的参数  
+    var searchUrl = window.location.href;
+    var searchData = searchUrl.split("="); //截取 url中的“=”,获得“=”后面的参数  
+    var searchID = decodeURI(searchData[1]); //decodeURI解码  
+    
+	
+	$.ajax({
+		type: "POST",
+		url: "/service/article_query_by_id.php",
+		data: {	id:searchID},
+		dataType: "json",
+		timeout : 10000,
+		success: function(datas){
+			 
+			new Vue({
+				el:'#artical',
+				data:{data:datas}, 
+			});
+			 
+		} ,
+		error: function(XMLHttpRequest,textStatus){  
+			if(textStatus=='timeout'){//超时操作
+				alert("对不起，读取超时，请联系管理员。");
+				return false;
+			}else{//其他错误
+				console.log(textStatus);
+				console.log(XMLHttpRequest)
+				alert("读取失败！");
+				return false;
+			}
+		} 
+	}); 
 
+});
 function convert(){
 	var text = document.getElementById("result").innerHTML;
 	console.log(text);
