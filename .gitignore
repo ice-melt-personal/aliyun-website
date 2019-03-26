@@ -23,5 +23,9 @@
 hs_err_pid*
 
 .idea
+# 忽略项目文件夹
 projects
+# 忽略WorkPress博客
 blog
+# 忽略数据库配置文件的更新
+config_db.php
