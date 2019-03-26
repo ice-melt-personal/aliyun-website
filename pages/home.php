@@ -16,17 +16,17 @@
 </style>
 </head>
 <?php
-$href1 = "http://ice-melt.top/blog/";
-$href2 = "http://ice-melt.top/projects/yiqingxuan";
-$href3 = "http://ice-melt.top/projects/yi";
-$href4 = "http://ice-melt.top/projects/tmlog";
-$href5 = "http://ice-melt.github.io";
-
-//$href1 = "http://localhost/blog/";
-//$href2 = "http://localhost/projects/yiqingxuan";
-//$href3 = "http://localhost/projects/yi";
-//$href4 = "http://localhost/projects/tmlog";
+//$href1 = "http://ice-melt.top/blog/";
+//$href2 = "http://ice-melt.top/projects/yiqingxuan";
+//$href3 = "http://ice-melt.top/projects/yiqi";
+//$href4 = "http://ice-melt.top/projects/tmlog";
 //$href5 = "http://ice-melt.github.io";
+
+$href1 = "http://localhost/blog/";
+$href2 = "http://localhost/projects/yiqingxuan";
+$href3 = "http://localhost/projects/yiqi";
+$href4 = "http://localhost/projects/tmlog";
+$href5 = "http://ice-melt.github.io";
 
 ?>
 <body>  

@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html> 
 <head>
@@ -42,42 +46,72 @@ body {
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
-					</button> <a class="navbar-brand" href="javascript:void(0)" onclick="iFrame('links.php')"><strong>夕兮曦兮 | ice-melt</strong></a>
+					</button>
+					
+						<?php
+							if(isset($_COOKIE["im_username"])){
+						?>
+								<a class="navbar-brand"  rel="nofollow">
+									<strong>夕曦 | ice-melt</strong>
+								</a>
+						<?php						
+							}else{
+						?>
+								<a class="navbar-brand" data-toggle="modal" 
+									data-target="#loginModal" class="login" rel="nofollow">
+									<img id="xiangleftright" width="21px" height="21px" 
+									style="float:left;" src="assets/images/icon/candan.png">
+									<strong> &nbsp;Hi,站长登录</strong>	
+								</a>
+						<?php		
+							}
+						?>
+						
+					</a>
 				</div>
 				
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li class="active">
-							 <a href="javascript:void(0)" onclick="iFrame('home.php')"><span class="glyphicon glyphicon-home"></span> 主页</a>
+						<li  class="active">
+							<a href="javascript:void(0)" onclick="iFrame('home.php')"><span class="glyphicon glyphicon-home"></span> 主页</a>
+						</li>
+						<?php
+							if(isset($_COOKIE["im_username"])){
+						?>	
+						<li>
+							<a href="javascript:void(0)" onclick="iFrame('artical_write.php')">写博客</a>
+						</li>
+						<?php
+							}
+						?>
+						<li>
+							<a href="javascript:void(0)" onclick="iFrame('artical_list.php')">博客</a>
 						</li>
 						<li>
-							 <a href="javascript:void(0)" onclick="iFrame('essays.php')">随笔</a>
+							<a href="javascript:void(0)" onclick="iFrame('tutorials.php')">教程</a>
 						</li>
 						<li>
-							 <a href="javascript:void(0)" onclick="iFrame('tutorials.php')">教程</a>
+							<a href="javascript:void(0)" onclick="iFrame('projects.php')">项目</a>
 						</li>
 						<li>
-							 <a href="javascript:void(0)" onclick="iFrame('projects.php')">项目</a>
-						</li>
-						<li>
-							 <a href="javascript:void(0)" onclick="iFrame('comment.php')">留言</a>
+							<a href="javascript:void(0)" onclick="iFrame('comment.php')">留言</a>
 						</li>
 						<li class="dropdown">
-							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于</a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">关于</a>
 							<ul class="dropdown-menu">
 								<li>
-									 <a href="javascript:void(0)" onclick="iFrame('website_description.php')">网站说明</a>
+									<a href="javascript:void(0)" onclick="iFrame('website_description.php')">网站说明</a>
 								</li>
 								<li>
-									 <a href="javascript:void(0)" onclick="iFrame('website_planning.php')">短期规划</a>
+									<a href="javascript:void(0)" onclick="iFrame('website_planning.php')">短期规划</a>
 								</li>
 								<li>
-									 <a href="javascript:void(0)" onclick="iFrame('website_log.php')">网站日志</a>
+									<a href="javascript:void(0)" onclick="iFrame('website_log.php')">网站日志</a>
 								</li>
 								<li class="divider">
 								</li>
 								<li>
-									 <a href="javascript:void(0)" onclick="iFrame('about_me.php')">关于我</a>
+									<a href="javascript:void(0)" onclick="iFrame('about_me.php')">关于我</a>
 								</li>
 							</ul>
 						</li>
@@ -87,8 +121,13 @@ body {
 							<input class="form-control" type="text" placeholder="百度一下..."/>
 						</div> 
 						<button class="btn btn-default"type="search" >
-						<span class="glyphicon glyphicon-search"></span> 搜索</button> 
+						<span class="glyphicon glyphicon-search"></span> 搜索</button>
 					</form>
+					<!--
+					<div>
+						<img id="xiangleftright" width="21px" height="21px" style="float:left;" src="assets/images/icon/candan.png">
+					</div>
+					-->
 				</div> 
 			</nav>
 		</div>
@@ -121,6 +160,34 @@ body {
 	</div>	
 </div>
 
+
+<!--登录注册模态框-->
+<div class="modal fade user-select" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form action="/service/logincheck.php" method="post">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="loginModalLabel">登录</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="loginModalUserNmae">用户名</label>
+            <input name="username" type="text" class="form-control" id="loginModalUserNmae" placeholder="请输入用户名" autofocus maxlength="15" autocomplete="off" required>
+          </div>
+          <div class="form-group">
+            <label for="loginModalUserPwd">密码</label>
+            <input name="password" type="password" class="form-control" id="loginModalUserPwd" placeholder="请输入密码" maxlength="18" autocomplete="off" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <input name="submit" type="submit" class="btn btn-primary" value="登录"/>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 </body>
 
 <!-- JavaScript 放置在文档最后面可以使页面加载速度更快 -->
